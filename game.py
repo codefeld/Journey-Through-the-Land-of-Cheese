@@ -157,13 +157,24 @@ def level1():
 	text.win()
 	if "level 1" not in levelbeat:
 		levelbeat.append("level 1")
-	if health <= 10 or fullness <= 10:
-		typing("However, with your levels getting low, you will need to plan carefully for the next level.\n")
 	functions.newlevel()
 
 def level2():
 	global health
 	global fullness
 	typing("Welcome to the second level of this game.\n")
-	typing("You may remember the skill levels you ended the last level with.\n")
-	typing("You health was %s and you fullness was %s.\n" % (health, fullness))
+	typing("Your health and fullness levels have regenerated back to 20.\n")
+	typing("However, when you levels subtract, I will not tell you your entire level; you will have to memorize it yourself.\n")
+	typing("Now, lets get started.\n")
+	time.sleep(1)
+	clear()
+	typing("You decide to explore the Land of Cheese.\n")
+	typing("You leave your cheese hole and walk in a random direction.\n")
+	time.sleep(1)
+	typing("NO, NOT THAT WAY! THAT'S A CLIFF!\n")
+	time.sleep(1)
+	typing("Okay. You are back on track.\n")
+	typing("You see a sign that says, \"You are now leaving the Swiss Cheese Valley, known for its bulls and nice cheese formations.\"\n")
+	typing("Oh now you tell us about the bulls.\n")
+	typing("Right behind the sign, you see another sign that says, \"Welcome to the Bleu Cheese Fields, known for its dangerous monsters and evil chickens\n")
+	typing("You think to yourself, \"Evil Chickens? Uh-oh...\"\n")
