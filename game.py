@@ -285,7 +285,10 @@ def level2():
 	typing("As you walk towards the castle, you find that it is surrounded by a moat made of milk.\n")
 	fullness -= 5
 	typing("You suddenly feel hungrier. Your fullness level went down 5.\n")
-	functions.lose()
+	if health <=0 or fullness <= 0:
+		typing("Sadly, your levels have reached 0.\n")
+		text.lost()
+		newlevel()
 	typing("The goat brings you inside the castle, where you see a throne with a goat sitting on it.\n")
 	typing("Unlike all of the other goats in the mountains, he is a real goat.\n")
 	typing("Real Goat - I am Goaty McGoatcheese! You shall prepare for thy doom!\n")
