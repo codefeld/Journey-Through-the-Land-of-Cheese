@@ -164,7 +164,7 @@ def level2():
 	global fullness
 	typing("Welcome to the second level of this game.\n")
 	typing("Your health and fullness levels have regenerated back to 20.\n")
-	typing("However, when you levels subtract, I will not tell you your entire level; you will have to memorize it yourself.\n")
+	typing("However, when your levels subtract, I will not tell you your entire level; you will have to memorize it yourself.\n")
 	typing("Now, lets get started.\n")
 	time.sleep(1)
 	clear()
@@ -178,3 +178,118 @@ def level2():
 	typing("Oh now you tell us about the bulls.\n")
 	typing("Right behind the sign, you see another sign that says, \"Welcome to the Bleu Cheese Fields, known for its dangerous monsters and evil chickens\n")
 	typing("You think to yourself, \"Evil Chickens? Uh-oh...\"\n")
+	time.sleep(1)
+	clear()
+	typing("Walking through the Bleu Cheese Fields, you notice that the color of the terrain has gradually changed from a light yellow to a white color with blue specks.\n")
+	fullness -= 5
+	typing("You realize that you are starting to get hungry. Your fullness level went down 5.\n")
+	typing("Then, you feel something pecking at the back of your ankle.\n")
+	typing("You turn around to find a chicken the same color as the rest of the terrain you are in, except its eyes, which are red.\n")
+	typing("For some reason, the chicken actually looks a little cute.\n")
+	typing("You feel the sudden urge to pet it.\n")
+	typing("As you reach down, the chicken makes a sound so loud it hurts your ears.\n")
+	typing("Then hundreds of evil chickens suddenly appear.\n")
+	time.sleep(1)
+	clear()
+	typing("All of the chickens run up to you and try to peck you.\n")
+	typing("While doing so, you freak out.\n")
+	typing("Here are some things you can do:\n")
+	print("1) Fight\n2) Run")
+	chickenescape = ""
+	while chickenescape not in ["1", "2"]:
+		chickenescape = input("> ")
+	clear()
+	if chickenescape == "1":
+		typing("You defeated all of the chickens, since they are weak.\n")
+		health -= 5
+		typing("However, you lost 5 health doing so.\n")
+	elif chickenescape == "2":
+		typing("You try to run from the chickens.\n")
+		typing("However, the chickens are faster than you thought.\n")
+		text.lost()
+		functions.newlevel()
+	typing("Now that the chickens are no longer a problem, you decide to find some food.\n")
+	typing("Do you like bleu cheese? (y/n)\n")
+	bleucheese = ""
+	while bleucheese not in ["y", "n"]:
+		bleucheese = input("> ")
+	clear()
+	if bleucheese == "y":
+		typing("It's a good thing that you like bleu cheese, since it's easy to find.\n")
+		typing("You eat some of the bleu cheese ground, adding 5 to your fullness level.\n")
+		fullness += 5
+		typing("You decide to go and explore some more.\n")
+		time.sleep(1)
+		clear()
+	elif bleucheese == "n":
+		typing("That could be a problem.\n")
+		typing("However, you have to eat.\n")
+		typing("You decide that the best thing you can do is to journey out farther.\n")
+		time.sleep(1)
+		clear()
+	fullness -= 5
+	typing("After several hours of walking, you are still stuck in the Bleu Cheese Fields with no sign of a way out.\n")
+	typing("Your fullness level also went down 5 again.\n")
+	typing("You have no choice but to keep wandering.\n")
+	time.sleep(1)
+	clear()
+	typing("Finally, you find something new. A sign that says \"Welcome to the Goat Cheese Mountains, known for its bad taste!\"\n")
+	typing("\"Oh, come on!\" you say to yourself.\n")
+	fullness -= 5
+	typing("Your fullness level went down 5 again.\n")
+	typing("Then, you see a goat made out of goat cheese charging at you.\n")
+	typing("When it hits you, your health goes down 5.\n")
+	health -= 5
+	typing("The goat tries to charge at you again.\n")
+	typing("This time, you barely manage to dodge it before it hits you.\n")
+	typing("You need to come up with a decision before the goat charges you again.\n")
+	typing("You find a chunk of goat cheese laying on the ground that you can use to shield yourself.\n")
+	typing("The goat charges at you again, but because you have the shield, you only lose 2 health.\n")
+	health -= 2
+	typing("By then, the goat gives up and runs away.\n")
+	typing("You are very hungry by now. The shield you have is edible, but you, like most people, hate goat cheese.\n")
+	typing("You make the decision.\n")
+	print("1) Eat the shield\n2) Don't eat the shield")
+	yumyumshield = ""
+	while yumyumshield not in ["1", "2"]:
+		yumyumshield = input("> ")
+	clear()
+	if yumyumshield == "1":
+		typing("The shield restores 10 fullness levels.\n")
+		fullness += 10
+		typing("It also restores 5 health levels.\n")
+		typing("However, you dislike goat cheese, so, a few minutes later, you throw up, losing 5 health levels.\n")
+	elif yumyumshield == "2":
+		typing("You have decided to not eat the shield. You carry it along with you in case you find more goats.\n")
+	time.sleep(1)
+	clear()
+	typing("As you walk through the Goat Cheese Mountains, you come across a large castle made of goat cheese.\n")
+	typing("Would you like to explore the castle? (y/n)\n")
+	cheesecastle = ""
+	while cheesecastle not in ["y", "n"]:
+		cheesecastle = input("> ")
+	clear()
+	if cheesecastle == "y":
+		if yumyumshield == "2":
+			typing("You hold up your shield, ready to protect yourself.\n")
+		typing("You walk towards the castle.\n")
+	elif cheesecastle == "n":
+		typing("You decide not to explore the castle.\n")
+		typing("You walk along the mountains until you see a sign that says, \"Welcome to the Parmesan Desert, known for its emptiness!\"\n")
+		typing("As you start to walk into the desert, you find a goat made of goat cheese behind you.\n")
+		typing("Goat - Hey, you! You aren't to be leaving here yet!\n")
+		typing("He makes you follow him.\n")
+		typing("A few minutes later, you find that he is leading you to the castle you saw earlier.\n")
+	time.sleep(1)
+	clear()
+	typing("As you walk towards the castle, you find that it is surrounded by a moat made of milk.\n")
+	fullness -= 5
+	typing("You suddenly feel hungrier. Your fullness level went down 5.\n")
+	functions.lose()
+	typing("The goat brings you inside the castle, where you see a throne with a goat sitting on it.\n")
+	typing("Unlike all of the other goats in the mountains, he is a real goat.\n")
+	typing("Real Goat - I am Goaty McGoatcheese! You shall prepare for thy doom!\n")
+	typing("Well, even though you are in trouble, you still beat the level.\n")
+	text.win()
+	typing("Also, there will be a third level coming very soon. Keep an eye out for it!\n")
+	functions.newlevel()
