@@ -12,7 +12,7 @@ def typing(text):
 		time.sleep(random.random()*10/100)
 
 def levelpicker():
-	clear()
+	game.clear()
 	typing("Ah, I see. You want to play this game, eh?\n")
 	typing("Well, you will want to pick a chapter to start on.\n")
 	if "level 1" not in game.levelbeat:
